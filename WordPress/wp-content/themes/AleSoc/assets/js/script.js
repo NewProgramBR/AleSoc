@@ -1,22 +1,4 @@
 $(document).ready(function () {
-    $('ul a').on('click', function (event) {
-        event.preventDefault();
-        $.ajax({
-            url: $templateDir + '/update_main.php',
-            type: "POST",
-            dataType: 'html',
-            data: ({
-                id: $(this).attr('href')
-            }),
-            success: function (data) {
-                $('main').html(data);
-            },
-            error: function (event) {
-                console.log(event);
-            }
-        });
-    });
-
     /* ALERT-OUT */
     var first_time = true;
     $(this).on('mouseleave', function () {

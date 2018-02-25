@@ -20,4 +20,25 @@
 
     <link href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700,900" rel="stylesheet">
 
-    <script> var $templateDir = "<?php bloginfo('template_url'); ?>";</script>
+    <script>
+        var $templateDir = "<?php bloginfo('template_url'); ?>";
+    </script>
+</head>
+
+<body>
+    <nav class="_center-child">
+        <h1 class="_wrapper">Alexandre Sociologia</h1>
+        <ul>
+            <a href="<?php echo home_url()?>">
+                <li class="_center-child">Início</li>
+            </a>
+            <a href="avaliacoes">
+                <li class="_center-child">Avaliações</li>
+            </a>
+            <a href="sobre">
+                <li class="_center-child">Sobre</li>
+            </a>
+        </ul>
+    </nav>
+
+    <main>
