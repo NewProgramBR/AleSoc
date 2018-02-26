@@ -22,22 +22,25 @@
 
     <script>
         var $templateDir = "<?php bloginfo('template_url'); ?>";
+
     </script>
+
+    <!--  <?php wp_head(); ?> -->
 </head>
 
 <body>
     <nav class="_center-child">
         <h1 class="_wrapper">Alexandre Sociologia</h1>
         <ul>
-            <a href="<?php echo home_url()?>">
-                <li class="_center-child">Início</li>
-            </a>
-            <a href="avaliacoes">
-                <li class="_center-child">Avaliações</li>
-            </a>
-            <a href="sobre">
-                <li class="_center-child">Sobre</li>
-            </a>
+            <li class="_center-child">
+                <a href="<?php echo home_url()?>" class="_center-child">Início</a>
+            </li>
+            <li class="_center-child">
+                <a href="avaliacoes" class="_center-child">Avaliações</a>
+            </li>
+            <li class="_center-child">
+                <a href="sobre" class="_center-child">Sobre</a>
+            </li>
         </ul>
     </nav>
 

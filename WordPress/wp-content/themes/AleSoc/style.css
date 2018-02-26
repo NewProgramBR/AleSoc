@@ -50,6 +50,13 @@ input[type="submit"] {
 
 /*----------CLASSES------------*/
 
+._black-cover {
+    height: 100%;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    opacity: 0;
+}
+
 ._wrapper {
     max-width: 1100px; /* Espaço total do envolcro */
     padding: 0 4vw; /* Tamanho da barreira entre o contúdo interno e a borda da janela */
@@ -76,29 +83,27 @@ input[type="submit"] {
 }
 
 ._center-X {
-    margin: 0 auto
+    margin: auto
 }
 
 /*------------NAV-----------------*/
 nav{
-    height: 18vh;
-    width: 100vw;
+    min-height: 18vh;
+    width: 100%;
     z-index: 9999;
 
     background-color: white;
 
     text-align: center;
-}
+    box-sizing: border-box;
+    padding-top: 20px;
 
-nav > div{
-    height: 100%;
-    justify-content: space-between !important;
+    box-shadow: 0px 0px 5px rgba(0,0,0,0.2)
 }
 
 nav h1{
     font-size: 2.4em;
     font-weight: 100;
-    margin-top: 15px
 }
 
 nav ul{
@@ -113,29 +118,42 @@ nav ul{
 
 }
 
-nav ul a{
-    width: 100%;
-    max-width: 180px;
-}
-
 nav li{
     height: 50px;
+    width: 100%;
+    max-width: 180px;
 
     text-align: center;
     transition: 1s;
+
+    position: relative;
 
 }
 
 nav li:hover{
     background-color: dimgray;
     color: white;
-    transform: translateY(10px)
+    padding: 0 15px
 }
+
+nav li a{
+    width: 100%;
+    height: 100%;
+
+    position: absolute;
+    z-index: 10
+}
+
 
 /*------------MAIN-----------------*/
 
 main{
-    height: 82vh
+    min-height: 76vh;
+    width: 100%;
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    text-align: center
 }
 
 /*------------FOOTER-----------------*/
@@ -144,20 +162,25 @@ footer {
     color: black;
     font-size: 0.8em;
 
-    box-sizing: border-box;
-    padding: 16px 0;
-
-    position: fixed;
-    z-index: 10;
-    bottom: 0;
-    width: 100vw
+    width: 100%;
 }
 
-footer ._wrapper {
+footer .container {
     display: flex;
     justify-content: space-between;
+    align-items: center;
+    height: 100%;
+    min-height: 6vh;
 }
 
 footer a {
     color: dodgerblue
+}
+
+/*------------MEDIAS-----------------*/
+
+@media (max-width: 400px) {
+    nav h1{
+        font-size: 1.9em
+    }
 }

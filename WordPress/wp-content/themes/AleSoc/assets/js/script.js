@@ -1,15 +1,19 @@
 $(document).ready(function () {
-    /* ALERT-OUT */
-    var first_time = true;
-    $(this).on('mouseleave', function () {
-        if (first_time) {
-            $('._black-cover').css('display', 'flex');
+    $('.ano').on('mouseenter', function () {
+        $op = this;
+        $('.ano').each(function () {
+            if (this == $op) {
+                $(this).css('opacity', 1);
+            } else {
+                $(this).css('opacity', 0.6);
+            }
+        });
+    });
 
-            $('._alert-close').on('click', function () {
-                $('._black-cover').css('display', 'none')
-            });
-        }
-        first_time = false;
+    $('.container').on('mouseleave', function () {
+        $('.ano').each(function () {
+            $(this).css('opacity', 1);
+        });
     });
 
     /* SMOOTH SCROLL LINK*/
