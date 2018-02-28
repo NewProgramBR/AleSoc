@@ -1,10 +1,13 @@
 main p {
     font-size: 1.5em;
     color: dimgray;
-    padding: 4px
+    padding: 10px
 }
 
-main .container {
+
+/*------------ANOS-----------------*/
+
+.container {
     display: flex;
     justify-content: space-between;
 
@@ -14,7 +17,7 @@ main .container {
     padding: 10px 20px;
 }
 
-.ano {
+.container > div {
     width: 33%;
 
     font-size: 10em;
@@ -22,47 +25,68 @@ main .container {
 
     transition: 1s;
 
-    color: whitesmoke;
+    color: white;
     position: relative;
-    border-bottom: 20px solid;
+    /* border-bottom: 25px solid; */
 
-    background-color: white
+    background-color: white;
+
+    cursor: pointer
 }
 
-.ano:nth-child(1) {
-    color: lightsteelblue;
-    border-color: lightsteelblue
+.container > div:nth-child(1) {
+    background-color: lightsteelblue;
+    /* color: lightsteelblue;
+    border-color: lightsteelblue */
 }
 
-.ano:nth-child(2) {
-    color: burlywood;
-    border-color: burlywood
+.container > div:nth-child(2) {
+     background-color: burlywood;
+    /* color: burlywood;
+    border-color: burlywood */
 }
 
-.ano:nth-child(3) {
-    color: indianred;
-    border-color: indianred
+.container > div:nth-child(3) {
+     background-color: indianred;
+    /* color: indianred;
+    border-color: indianred */
 }
 
-.ano:hover {
-    color: white
+.container > div:nth-child(4) {
+     background-color: rebeccapurple;
+   /*  color: rebeccapurple;
+    border-color: rebeccapurple */
 }
 
-.ano:nth-child(1):hover {
+.container > div:hover {
+    /* color: white; */
+    padding: 0 15%
+}
+/*
+.container > div:nth-child(1):hover {
     background-color: lightsteelblue
 }
 
-.ano:nth-child(2):hover {
+.container > div:nth-child(2):hover {
     background-color: burlywood
 }
 
-.ano:nth-child(3):hover {
+.container > div:nth-child(3):hover {
     background-color: indianred
 }
 
-.ano a {
+.container > div:nth-child(4):hover {
+    background-color: rebeccapurple
+} */
+
+.container > div a {
     height: 100%;
     width: 100%;
     position: absolute;
     z-index: 12
 }
+
+
+/*------------SEMESTRES-----------------*/
+
+/*------------DATAS-----------------*/

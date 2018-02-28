@@ -10,6 +10,8 @@
     <!-- Main Style -->
     <link rel="stylesheet" href="<?php echo get_stylesheet_uri(); ?>">
 
+    <link rel="stylesheet" href="<?php echo get_template_directory_uri() . '/assets/css/avaliacoes.css'; ?>">
+
     <!-- JQuery -->
     <script src="<?php bloginfo('template_url'); ?>/assets/js/jquery.js"></script>
 

@@ -1,7 +1,13 @@
 $(document).ready(function () {
-    $('.ano').on('mouseenter', function () {
+    $('main .container').on('mouseleave', function () {
+        $('.opt').each(function () {
+            $(this).css('opacity', 1);
+        });
+    });
+
+    $('main .container').on('mouseenter', '.opt', function () {
         $op = this;
-        $('.ano').each(function () {
+        $('.opt').each(function () {
             if (this == $op) {
                 $(this).css('opacity', 1);
             } else {
@@ -10,10 +16,21 @@ $(document).ready(function () {
         });
     });
 
-    $('.container').on('mouseleave', function () {
-        $('.ano').each(function () {
-            $(this).css('opacity', 1);
-        });
+    $('main .container').on('click', '.opt', function () {
+        $('main').fadeTo('slow', 0, function () {
+            $.ajax({
+                url: $templateDir + '/update_avaliacoes.php',
+                type: "POST",
+                dataType: 'json',
+                success: function (data) {
+                    $('main p').html(data[0]);
+                    $('main .container').html(data[1]);
+                },
+                error: function (event) {
+                    console.log(event);
+                }
+            });
+        }).fadeTo('slow', 1);
     });
 
     /* SMOOTH SCROLL LINK*/
