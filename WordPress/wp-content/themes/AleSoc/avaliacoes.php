@@ -10,19 +10,14 @@
             $this->qtd_anos = $a3;
         }
 
-        function htmlThis($post = true){
-            if ($post) {
-               return 'olha os posts aqui';
+        function htmlThis(){
+            $k = ($this->etapa) ? $this->qtd_anos : $this->divisao[1];
+            foreach ($k as $val) {
+                $data .= '<div class="opt _center-child" _v=' . $val . '>';
+                $data .= $val . 'º';
+                $data .= '</div>';
             }
-            else{
-                $k = ($this->etapa) ? $this->qtd_anos : $this->divisao[1];
-                foreach ($k as $val) {
-                    $data .= '<div class="opt _center-child" _v=' . $val . '>';
-                    $data .= $val . 'º';
-                    $data .= '</div>';
-                }
-                return $data;
-            }
+            return $data;
         }
     }
 ?>

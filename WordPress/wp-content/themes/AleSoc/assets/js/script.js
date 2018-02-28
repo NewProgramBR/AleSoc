@@ -16,15 +16,25 @@ $(document).ready(function () {
         });
     });
 
+    $k = 0;
     $('main .container').on('click', '.opt', function () {
+        $k++;
+        $post = $k >= 2 ? true : false;
+        console.log($post);
         $('main').fadeTo('slow', 0, function () {
             $.ajax({
                 url: $templateDir + '/update_avaliacoes.php',
                 type: "POST",
                 dataType: 'json',
+                data: ({post: $post}),
                 success: function (data) {
-                    $('main p').html(data[0]);
-                    $('main .container').html(data[1]);
+                    console.log(data);
+                    if ($post) {
+                        $('main').html(data);
+                    } else {
+                        $('main p').html(data[0]);
+                        $('main .container').html(data[1]);
+                    }
                 },
                 error: function (event) {
                     console.log(event);

@@ -13,7 +13,7 @@
 
     <p id="pergunta"> <?php echo $Avaliacoes->pergunta; ?></p>
     <div class="container">
-        <?php echo $Avaliacoes->htmlThis(false); ?>
+        <?php echo $Avaliacoes->htmlThis(); ?>
     </div>
 
 <?php get_footer(); ?>
