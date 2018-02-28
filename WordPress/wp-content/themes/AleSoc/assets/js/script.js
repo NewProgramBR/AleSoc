@@ -16,16 +16,16 @@ $(document).ready(function () {
         });
     });
 
-    $k = 0;
+    $k = 0; //clicks counter
     $('main .container').on('click', '.opt', function () {
         $k++;
-        $post = $k >= 2 ? true : false;
-        console.log($post);
+        $post = ($k >= 2) ? true : false;   //posts time?
+        $type = ($post) ? 'html' : 'json';  //dataType = 'html' when posts only
         $('main').fadeTo('slow', 0, function () {
             $.ajax({
                 url: $templateDir + '/update_avaliacoes.php',
                 type: "POST",
-                dataType: 'json',
+                dataType: $type,
                 data: ({post: $post}),
                 success: function (data) {
                     console.log(data);
