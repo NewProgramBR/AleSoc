@@ -12,7 +12,7 @@
 ?>
 
     <p id="pergunta"> <?php echo $Avaliacoes->pergunta; ?></p>
-    <div class="container">
+    <div class="container opts">
         <?php echo $Avaliacoes->htmlThis(); ?>
     </div>
 

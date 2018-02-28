@@ -5,9 +5,9 @@ main p {
 }
 
 
-/*------------ANOS-----------------*/
+/*------------opt-----------------*/
 
-.container {
+.opts {
     display: flex;
     justify-content: space-between;
 
@@ -17,7 +17,7 @@ main p {
     padding: 10px 20px;
 }
 
-.container > div {
+.opt {
     width: 33%;
 
     font-size: 10em;
@@ -34,59 +34,105 @@ main p {
     cursor: pointer
 }
 
-.container > div:nth-child(1) {
+.opt:nth-child(1) {
     background-color: lightsteelblue;
     /* color: lightsteelblue;
     border-color: lightsteelblue */
 }
 
-.container > div:nth-child(2) {
+.opt:nth-child(2) {
      background-color: burlywood;
     /* color: burlywood;
     border-color: burlywood */
 }
 
-.container > div:nth-child(3) {
+.opt:nth-child(3) {
      background-color: indianred;
     /* color: indianred;
     border-color: indianred */
 }
 
-.container > div:nth-child(4) {
+.opt:nth-child(4) {
      background-color: rebeccapurple;
    /*  color: rebeccapurple;
     border-color: rebeccapurple */
 }
 
-.container > div:hover {
+.opt:hover {
     /* color: white; */
     padding: 0 15%
 }
 /*
-.container > div:nth-child(1):hover {
+.opt:nth-child(1):hover {
     background-color: lightsteelblue
 }
 
-.container > div:nth-child(2):hover {
+.opt:nth-child(2):hover {
     background-color: burlywood
 }
 
-.container > div:nth-child(3):hover {
+.opt:nth-child(3):hover {
     background-color: indianred
 }
 
-.container > div:nth-child(4):hover {
+.opt:nth-child(4):hover {
     background-color: rebeccapurple
 } */
 
-.container > div a {
+.opt a {
     height: 100%;
     width: 100%;
     position: absolute;
     z-index: 12
 }
 
+/*------------POSTS-----------------*/
+.posts {
+    min-height: 70vh;
 
-/*------------SEMESTRES-----------------*/
+    box-sizing: border-box;
+    padding: 0px 20%;
+}
 
-/*------------DATAS-----------------*/
+.post{
+    min-height: 20vh;
+    width: 100%;
+    background-color: white;
+    box-shadow: 0px 0px 10px rgba(0,0,0,0.5)
+}
+
+.post header{
+    height: 70px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-content: center;
+    text-align: center;
+    background-color: saddlebrown
+}
+
+.post > div, .post h1{
+    height: 100%;
+}
+
+.post h1{
+    background-color: red
+}
+
+.post .data, .pontos{
+    color: white;
+    font-size: 1.7em
+}
+
+.post .data{
+    width: 100px;
+    background-color: cadetblue
+}
+
+.post .pontos{
+    width: 100px;
+    background-color: teal;
+    border-radius: 100%;
+    padding: 50px 0
+
+}

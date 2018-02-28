@@ -30,7 +30,10 @@ $(document).ready(function () {
                 success: function (data) {
                     console.log(data);
                     if ($post) {
-                        $('main').html(data);
+                        $('main p').remove();
+                        $('main .container').html(data);
+                        $('main .container').removeClass('opts');
+                        $('main .container').addClass('posts');
                     } else {
                         $('main p').html(data[0]);
                         $('main .container').html(data[1]);
