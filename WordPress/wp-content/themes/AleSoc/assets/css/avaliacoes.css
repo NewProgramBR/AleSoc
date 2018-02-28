@@ -1,11 +1,12 @@
-main p {
+main > p {
     font-size: 1.5em;
     color: dimgray;
-    padding: 10px
+    padding: 10px;
+    text-align: center
 }
 
 
-/*------------opt-----------------*/
+/*------------OPÇÕES-----------------*/
 
 .opts {
     display: flex;
@@ -15,6 +16,8 @@ main p {
 
     box-sizing: border-box;
     padding: 10px 20px;
+
+    text-align: center
 }
 
 .opt {
@@ -27,7 +30,6 @@ main p {
 
     color: white;
     position: relative;
-    /* border-bottom: 25px solid; */
 
     background-color: white;
 
@@ -36,50 +38,25 @@ main p {
 
 .opt:nth-child(1) {
     background-color: lightsteelblue;
-    /* color: lightsteelblue;
-    border-color: lightsteelblue */
 }
 
 .opt:nth-child(2) {
-     background-color: burlywood;
-    /* color: burlywood;
-    border-color: burlywood */
+    background-color: burlywood;
 }
 
 .opt:nth-child(3) {
-     background-color: indianred;
-    /* color: indianred;
-    border-color: indianred */
+    background-color: indianred;
 }
 
 .opt:nth-child(4) {
-     background-color: rebeccapurple;
-   /*  color: rebeccapurple;
-    border-color: rebeccapurple */
+    background-color: rebeccapurple;
 }
 
 .opt:hover {
-    /* color: white; */
     padding: 0 15%
 }
-/*
-.opt:nth-child(1):hover {
-    background-color: lightsteelblue
-}
 
-.opt:nth-child(2):hover {
-    background-color: burlywood
-}
-
-.opt:nth-child(3):hover {
-    background-color: indianred
-}
-
-.opt:nth-child(4):hover {
-    background-color: rebeccapurple
-} */
-
-.opt a {
+.post a, .opt a {
     height: 100%;
     width: 100%;
     position: absolute;
@@ -87,52 +64,94 @@ main p {
 }
 
 /*------------POSTS-----------------*/
+
 .posts {
     min-height: 70vh;
 
     box-sizing: border-box;
-    padding: 0px 20%;
+    padding: 20px 5%;
+    display: flex;
+    flex-flow: wrap;
+    justify-content: center;
 }
 
-.post{
-    min-height: 20vh;
-    width: 100%;
+.post {
+    height: 100%;
+    max-height: 300px;
+    width: 500px;
     background-color: white;
-    box-shadow: 0px 0px 10px rgba(0,0,0,0.5)
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    margin: 10px;
+    position: relative;
+    transition: 0.6s transform;
+    border-radius: 10px
 }
 
-.post header{
+.post:hover{
+    transform: scale(1.05,1.05)
+}
+
+.post header {
     height: 70px;
     width: 100%;
+
     display: flex;
     justify-content: space-between;
-    align-content: center;
     text-align: center;
-    background-color: saddlebrown
+
+    color: white;
+
+    border-radius: 10px 10px 0 0
 }
 
-.post > div, .post h1{
+
+.old header{
+    background-color: gray;
+}
+.old .data{
+    background-color: dimgray;
+}
+
+.new header{
+    background-color: gainsboro;
+}
+.new .data{
+    background-color: skyblue;
+}
+
+.hot .data{
+    background-color: indianred;
+}
+
+.post header > div,
+.post header h1 {
     height: 100%;
 }
 
-.post h1{
-    background-color: red
+.post header h1 {
+    font-size: 1.5em;
+    font-weight: 500
 }
 
-.post .data, .pontos{
-    color: white;
-    font-size: 1.7em
+.data, .pontos {
+    font-size: 1.3em
 }
 
-.post .data{
-    width: 100px;
-    background-color: cadetblue
+.data {
+    width: 100%;
+    max-width: 90px;
+
+    border-top-left-radius: 10px
 }
 
-.post .pontos{
-    width: 100px;
-    background-color: teal;
-    border-radius: 100%;
-    padding: 50px 0
+.pontos {
+    padding: 0 10px;
+    border-top-right-radius: 10px
+}
 
+.post main{
+    box-sizing: border-box;
+    padding: 20px;
+    color: dimgray;
+    text-align: justify
 }
