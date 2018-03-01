@@ -56,7 +56,7 @@ main > p {
     padding: 0 15%
 }
 
-.post a, .opt a {
+.opt a {
     height: 100%;
     width: 100%;
     position: absolute;

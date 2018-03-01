@@ -1,4 +1,17 @@
 $(document).ready(function () {
+    $.ajax({
+        url: $templateDir + '/archive.php',
+        type: "POST",
+        dataType: 'html',
+        success: function (data) {
+            console.log(data);
+            $('main .container').html(data);
+        },
+        error: function (event) {
+            console.log(event);
+        }
+    });
+
     $('main .container').on('mouseleave', function () {
         $('.opt').each(function () {
             $(this).css('opacity', 1);
